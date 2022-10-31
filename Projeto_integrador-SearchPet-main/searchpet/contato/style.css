@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vh;
+    background-color: gainsboro;
+    
+
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+#imglogo {
+    width: 40px;
+}
+#textologo {
+    font-size: 30px;
+    margin-left: 5px;
+    width: 40px;
+    color: black
+}
+
+.botoes > ul{
+    display: flex;
+    align-items: center;
+
+}
+ul {
+    list-style: none;
+}
+
+ul > li {
+    font-size: 25px;
+    margin: 0px 40px 0px 0px;
+    padding: 3px;
+}
+
+ul > li> a:hover {
+
+    color: rgb(178, 178, 178);
+    
+}
+
+
+
+.main {
+
+    width: 100vw;
+    height: 90vh;
+    background-image: url(./home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#quadro {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.496);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+p {
+    margin: 0px 0px 16px 10px;
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

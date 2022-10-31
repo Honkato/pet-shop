@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vh;
+    background-color: gainsboro;
+    
+
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+#imglogo {
+    width: 40px;
+}
+#textologo {
+    font-size: 30px;
+    margin-left: 5px;
+    width: 40px;
+    color: black
+}
+
+.botoes > ul{
+    display: flex;
+    align-items: center;
+
+}
+ul {
+    list-style: none;
+}
+
+ul > li {
+    font-size: 25px;
+    margin: 0px 40px 0px 0px;
+    padding: 3px;
+}
+
+ul > li> a:hover {
+
+    color: rgb(178, 178, 178);
+    
+}
+
+
+
+.main {
+
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#quadro {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.66);
+    display: flex;
+    flex-direction: column;
+    
+  
+}
+
+p {
+    margin: 0px 0px 16px 10px;
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.cabecalho{
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(255, 255, 255, 0.502);
+    display: flex;
+    align-items: center;
+    
+}
+#opcoes{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#regiao{
+    margin-left: 15px;
+}
+#tipo{
+    margin-left: 20px;
+}
+#tipoanimal{
+    margin-left: 55px;
+}
+#cachorro{
+    margin-left: 15px;
+}
+#gato{
+    margin-left: 15px;
+}
+#outros {
+    margin-left: 15px;
+}
+#todos{
+    margin-left: 15px;
+}
+
+#textodoacao{
+    color: black;
+    font-size: 30px;
+}
+.card{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: scroll;
+}
+
+#animal{
+    width: 13%;
+    height: 40%;
+    background-color: white;
+    margin: 4%;
+    border: 1px solid white;
+    box-shadow: 0px 0px 20px white;
+    /* overflow: scroll; */
+    
+}
+
+#fotoanimal{
+    width: 100%;
+    height: 60%;
+    background-image: url("animal1.png");
+    background-position: center;
+    background-size: contain;
+    
+}
+#inf-animal{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+   
+}
+#botao-animal{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+#inf-animal>p {
+    color: black;
+    font-size: 15px;
+    margin-top: 5px;
+}
+#botao{
+    width: 45%;
+    height: 20%;
+    background-color: gray;
+}
+#status{
+    color:rgb(13, 192, 13);
+}
+#num-pagina{
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    
+}
+#navegacao{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 12%;
+}
+#botao:hover{
+    color: rgb(255, 255, 255);
+}
