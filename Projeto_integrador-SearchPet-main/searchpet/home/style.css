@@ -11,6 +11,7 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 10vh;
+    min-height: 85px;
     background-color: gainsboro;
     
 
@@ -18,8 +19,9 @@ header {
 
 .logo {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-left: 30px;
+    margin-top: 20px;
 }
 #imglogo {
     width: 40px;
@@ -110,6 +112,136 @@ a{
     margin: 0px 20px;
     text-align: justify;
 }
+
+#atrasBurger{
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 85px;
+    height: 50px;
+    background-color: #DCDCDC;
+    border-bottom-left-radius: 20px;
+    padding-right: 0px;
+}
+#atrasBurger.active{
+    display: none;
+}
+#burger {
+    height: 50px;
+    width: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    align-items: flex-end;
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+}
+#burger div{
+    border-radius: 50px;
+    width: 50px;
+    height: 10px;
+    background-color: rgb(0, 0, 0);
+    transition: all ease-out 0.5s;
+}
+#burger div:nth-child(1){
+    width: 80%;
+}
+#burger div:nth-child(2){
+    width: 60%;
+}
+#burger div:nth-child(3){
+    width: 40%;
+}
+#burger:hover div{
+    background-color: rgb(56, 97, 87);
+    width: 100%;
+}
+
+#burger.active > div:nth-child(3){
+    opacity: 0;
+}
+#burger.active > div:nth-child(1){
+    background-color: rgb(219, 247, 225);
+    width: 100%;
+    /* transform: rotate(45deg) translateY(14px) translateX(10px); */
+    /* transform: rotate(-135deg) translateY(-14px) translateX(-10px); */
+    transform: rotate(-45deg) translateY(10px) translateX(-14px);
+}
+#burger.active > div:nth-child(2){
+    background-color: rgb(219, 247, 225);
+    width: 100%;
+    /* transform: rotate(135deg) translateY(2px) translateX(2px); */
+    /* transform: rotate(-45deg) translateY(-2px) translateX(-2px); */
+    transform: rotate(45deg) translateY(2px) translateX(-2px);
+}
+#menuMobileBack{
+    /* display: flex; */
+    width: 220px;
+    height: 450px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 50px;
+    z-index: 41;
+    transform: translateX(-100%);
+    transition: all ease-in 1s;
+    color: white;
+}
+#menuMobileBack.active{
+    transform: translateX(0%);
+}
+#menuMobileBack.active .logo{
+    display: flex;
+}
+#menuMobileBack .logo{
+    display: none;
+    left: 250px;
+    color: white;
+    position: absolute;
+    margin: auto;
+    top: 20px;
+    align-items: flex-start;
+}
+#menuMobileBack .logo p{
+    color: white;
+}
+#menuMobileBack ul{
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 200px;
+}
+#menuMobileBack ul li {
+    padding: 15px;
+    border-bottom: 1px solid #10b9bf;
+    width: 100%;
+    
+}
+#menuMobileBack ul li a {
+    color: white;
+}
+#menuMobile{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    opacity: 70%;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    /* margin-left: -100vw; */
+    transform: translateX(-100%);
+    transition: all ease-in 1s;
+    z-index: 40;
+    color: white;
+}
+#menuMobile.active{
+    transform: translateX(0%);
+}
 @media(max-width: 1200px){
     .barra{
         background-color: black;
@@ -117,12 +249,20 @@ a{
         height: 5px;
         margin: 5px;
         border-radius: 5px;
+        margin-right: 15px;
     }
     
     .botoes ul {
         display: none;
     }
-
+    #atrasBurger{
+        display: contents;
+    }
+    #burger{
+        margin-right: 15px;
+        display: flex;
+        z-index: 50;
+    }
     header{
         min-width: 280px;
         width: 100%;
@@ -141,10 +281,27 @@ a{
         min-height: 280px;
     }
     .fundo {
+        /* flex-direction: column; */
+        width: 700px;  
+        height: 500px;      
+    }
+    
+    p {
+        font-size: 15px;
+    }
+    #img{
+        height: 200px;
+    }
+}
+@media(max-width: 700px){
+    .fundo {
         flex-direction: column;
+        min-width: 280px;
+        max-width: 500px;
         width: 100%;  
         height: 100%;      
     }
+    
     
     p {
         font-size: 10px;
@@ -152,10 +309,26 @@ a{
     #img{
         height: 200px;
     }
-
     #textocarrosel p{
         margin: 30px;
         max-width: 200px;
     }
 }
 
+@media(max-height: 832px){
+    .fundo {
+        /* flex-direction: column; */
+        /* width: 1200px; */
+        max-height: 750px;
+        height: 100%;  
+    }
+}
+@media(max-height: 525px){
+    .fundo{
+        flex-direction: row;
+        width: 500px;
+    }
+}
+@media(max-height: 460px){
+    
+}
