@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    overflow-x: hidden;
+}
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vh;
+    background-color: gainsboro;
+    
+
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+#imglogo {
+    width: 40px;
+}
+#textologo {
+    font-size: 30px;
+    margin-left: 5px;
+    width: 40px;
+    color: black
+}
+
+.botoes > ul{
+    display: flex;
+    align-items: center;
+   
+}
+ul {
+    list-style: none;
+    
+}
+
+#divuser{
+
+    height: 1%;
+    
+}
+#textuser{
+    font-size: 10px;
+    height: 1%;
+    color: black;
+}
+#user{
+    width: 35px;
+    padding-top: 15px;
+}
+#optext{
+    font-size: 20px;
+}
+select{
+    width: 25px;
+    border: none;
+    background-color: transparent;
+}
+#ultimo_li{
+    margin: 0;
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+
+header>.botoes > ul > li {
+    font-size: 25px;
+    margin: 0px 40px 0px 0px;
+    padding: 3px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+header>.botoes > ul > li> a:hover {
+
+    color: rgb(178, 178, 178);
+    text-decoration: underline;
+    
+}
+
+
+
+.main {
+
+    width: 100vw;
+    height: 90vh;
+    background-image: url(./home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+
+}
+
+#quadro {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.496);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+p {
+    margin: 0px 0px 16px 10px;
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.t1 {
+    margin-top: 50px;
+    color: white;
+
+}
+
+.t2 {
+
+    margin-top: 60px;
+    color: white;
+
+}
+
+#lorem {
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: justify;
+    width: 1200px;
+}
+
+.rodape {
+    padding: 45px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+footer {
+
+    height: 30vh;
+    width: 100vw;
+    background-color: gray;
+}
+
+#imgf {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.contato>ul>li {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+.contato>ul {
+    width: 300px;
+
+}
+
+#titlecont {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.contato {
+    width: 400px;
+}
+.siga>ul>li{
+    display: flex;
+    align-items: center;
+}
+.siga>ul>li:hover{
+    color: white;
+}
+.contato>ul>li:hover{
+    color: white;
+}

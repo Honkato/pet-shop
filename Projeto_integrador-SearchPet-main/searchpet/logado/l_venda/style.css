@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+}
 header {
 
     display: flex;
@@ -15,8 +18,6 @@ header {
     
 
 }
-
-
 
 .logo {
     display: flex;
@@ -36,10 +37,40 @@ header {
 .botoes > ul{
     display: flex;
     align-items: center;
-
+   
 }
 ul {
     list-style: none;
+    
+}
+
+#divuser{
+
+    height: 1%;
+    
+}
+#textuser{
+    font-size: 10px;
+    height: 1%;
+    color: black;
+}
+#user{
+    width: 35px;
+    padding-top: 15px;
+}
+#optext{
+    font-size: 20px;
+}
+select{
+    width: 25px;
+    border: none;
+    background-color: transparent;
+}
+#ultimo_li{
+    margin: 0;
+    width: 150px;
+    display: flex;
+    align-items: center;
 }
 
 header>.botoes>ul > li {

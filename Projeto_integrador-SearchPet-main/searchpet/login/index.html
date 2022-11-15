@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+
+        <header>
+            
+
+
+            <div class="logo">
+
+                <img src="./logo.png" id="imglogo">
+                <p id="textologo">SearchPet</p>
+
+            </div>
+            <div id="atrasBurger"></div>
+            <div id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="botoes">
+                <div id="menuMobileBack">
+                    <ul>
+                        <li><a href="../home/index.html">Home</a></li>
+                        <li><a href="../doacoes/index.html">Doações</a></li>
+                        <li><a href="../vendas/index.html">Vendas</a></li>
+                        <li><a href="../sobre/index.html">Sobre nós</a></li>
+                        <li><u>Login/Cadastro</u></li>
+                        <div class="logo">
+                            <img src="../logo2.png" id="imglogo">
+                            <p id="textologo">SearchPet</p>
+                        </div>
+                    </ul>
+                </div>
+                <div id="menuMobile"></div>
+                <ul>
+                    <li><a href="../home/index.html">Home</a></li>
+                    <li><a href="../doacoes/index.html">Doações</a></li>
+                    <li><a href="../vendas/index.html">Vendas</a></li>
+                    <li><a href="../sobre/index.html">Sobre nós</a></li>
+                    <li><u>Login/Cadastro</u></li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div id="quadro">
+                <div class="card">
+
+                    <form class="form">
+                       <p id="textlogin"> Login</p>
+
+                        <div id="div_email">
+                            <label><img src="../image/user.png" id="img_login"></label>
+                            <input type="email" id="login" placeholder=" Insira o seu email" required/> 
+                        </div>
+                        
+			            <div id="div_senha">
+                            <label><img src="../image/padlock.png" id="img_login"></label>
+                            <input type="password" id="senha" placeholder="  Insira sua senha" required/> 
+                        </div>
+                       
+                        <div id="checkbox">
+                            <input type="checkbox" id="lembrar">
+                            <label for="lembrar" id="textlembrar">Lembrar-me</label>
+                        </div>
+                        <input type="button" value="Entrar" id="botao_entrar" onclick="login.value == 'larissa.carrara@hotmail.com' && senha.value =='1234' ? window.location.href = '/logado/l_home/index.html' :alert('Login inválido')">
+                        <span>
+                             <hr size="10" width="35%" id="linha"> 
+                            <p id="textspan">Ou</p>
+                            <hr size="10" width="35%" id="linha">
+                        </span>
+                        
+                        <input type="button" value="Cadastrar" id="botao_cadastro">
+                    </form>
+                    
+                    
+                
+                </div>
+
+            </div>
+
+               
+        </main>
+
+
+        <footer>
+            <div class="rodape">
+                <div class="contato">
+                    <h3 id="titlecont">Contato</h3>
+                    <ul>
+                        <li>
+                            <span><img src="../image/telefone-fixo (2).png"
+                                    id="imgf"></span>(19) 99775-8097
+                        </li>
+                        <li>
+                            <span><img src="../image/whatsapp.png"
+                                    id="imgf"></span>WhatsApp
+                        </li>
+                        <li>
+                            <span><img src="../image/email.png" id="imgf"></span>Larissa.carrara@hotmail.com
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="siga">
+                    <h3 id="titlecont">Redes sociais</h3>
+                    <ul>
+                        <li>
+                            <span><img src="../image/instagram-logo.png"
+                                    id="imgf"></span>Instagram
+                        </li>
+                        <li>
+                            <span><img src="../image/facebook.png"
+                                    id="imgf"></span>Facebook
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </footer>
+
+        </body>
+        
+
+
+<script src="../main.js"></script>
+
+    </html>

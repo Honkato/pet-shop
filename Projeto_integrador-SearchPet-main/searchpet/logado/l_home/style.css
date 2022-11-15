@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+}
 header {
 
     display: flex;
@@ -36,31 +39,65 @@ header {
 .botoes > ul{
     display: flex;
     align-items: center;
-
+   
 }
 ul {
     list-style: none;
+    
 }
 
+#divuser{
+
+    height: 1%;
+    
+}
+#textuser{
+    font-size: 10px;
+    height: 1%;
+    color: black;
+}
+#user{
+    width: 35px;
+    padding-top: 15px;
+}
+
+select{
+    width: 25px;
+    border: none;
+    background-color: transparent;
+}
+#optext{
+    font-size: 20px;
+}
+#ultimo_li{
+    margin: 0;
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
 header>.botoes>ul > li {
     font-size: 25px;
     margin: 0px 40px 0px 0px;
     padding: 3px;
     font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
 }
 
 header>.botoes>ul > li> a:hover {
 
     color: rgb(178, 178, 178);
     text-decoration: underline;
+    
 }
-
-
+#optext{
+    font-size: 18px;
+}
 
 .main {
 
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background-image: url(./home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,10 +112,11 @@ header>.botoes>ul > li> a:hover {
 
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.66);
+    background-color: rgba(0, 0, 0, 0.496);
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
+    align-items: center;
   
 }
 
@@ -94,122 +132,76 @@ a{
     color: black;
 }
 
-.cabecalho{
-    width: 100vw;
-    height: 10vh;
-    background-color: rgba(255, 255, 255, 0.502);
+#img {
+    width: 100px;
+    max-height: 600px;
+} 
+
+.fundo {
+    width: 1200px;
+    height: 750px;
     display: flex;
     align-items: center;
-}
-#opcoes{
-    width: 100vw;
-    height: 10vh;
-    display: flex;
     justify-content: center;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.178);
 }
 
-#regiao{
-    margin-left: 15px;
-}
-#tipo{
-    margin-left: 20px;
-}
-#tipoanimal{
-    margin-left: 55px;
-}
-#cachorro{
-    margin-left: 15px;
-}
-#gato{
-    margin-left: 15px;
-}
-#outros {
-    margin-left: 15px;
-}
-#todos{
-    margin-left: 15px;
-}
 
-#textodoacao{
-    color: black;
-    font-size: 30px;
-}
-.card{
-    width: 100vw;
-    height: 100vh;
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    overflow: scroll;
-    overflow-x: hidden;
-}
-
-#animal{
-    width: 13%;
-    height: 40%;
-    background-color: white;
-    margin: 4%;
-    border: 1px solid white;
-    box-shadow: 0px 0px 20px white;
-    /* overflow: scroll; */
-    
-}
-
-#fotoanimal{
+#textocarrosel > p {
+    max-width: 400px;
     width: 100%;
-    height: 60%;
-    background-image: url("animal1.png");
-    background-position: center;
-    background-size: contain;
-    
+    margin: 0px 20px;
+    text-align: justify;
 }
-#inf-animal{
-    width: 100%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@media(max-width: 1200px){
+    .barra{
+        background-color: black;
+        width: 30px;
+        height: 5px;
+        margin: 5px;
+        border-radius: 5px;
+    }
     
-   
-}
-#botao-animal{
-    width: 100%;
-    height: 40%;
-    display: flex;
-    justify-content: center;
+    .botoes ul {
+        display: none;
+    }
+
+    header{
+        min-width: 280px;
+        width: 100%;
+        min-height: 50px;
+    }
+    .botoes ul li {
+        border-bottom: 1px solid black;
+    }
+
+    .logo {
+        margin-left: 10px;
+    }
+    .main{
+        min-width: 280px;
+        /* height: 500px; */
+        min-height: 280px;
+    }
+    .fundo {
+        flex-direction: column;
+        width: 100%;  
+        height: 100%;      
+    }
+    
+    p {
+        font-size: 10px;
+    }
+    #img{
+        height: 200px;
+    }
+
+    #textocarrosel p{
+        margin: 30px;
+        max-width: 200px;
+    }
 }
 
-#inf-animal>p {
-    color: black;
-    font-size: 15px;
-    margin-top: 5px;
-}
-#botao{
-    width: 45%;
-    height: 20%;
-    background-color: gray;
-}
-#status{
-    color:rgb(13, 192, 13);
-}
-
-#num-pagina{
-    height: 20px;
-    width: 20px;
-    margin-left: 5px;
-    
-}
-#navegacao{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 12%;
-}
-#botao:hover{
-    color: rgb(255, 255, 255);
-}
 .rodape {
     padding: 45px;
     display: flex;
@@ -232,10 +224,10 @@ footer {
 }
 
 .contato>ul>li {
+    margin-bottom: 5px;
     font-size: 15px;
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
 
 }
 

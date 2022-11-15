@@ -12,6 +12,9 @@
     <body>
 
         <header>
+
+
+
             <div class="logo">
 
                 <img src="./logo.png" id="imglogo">
@@ -19,41 +22,31 @@
 
             </div>
 
-            <div id="atrasBurger"></div>
-                <div id="burger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-
+            <div class="menuBotao">
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+            </div>
+            
             <div class="botoes">
-                <div id="menuMobileBack">
-                    <ul>
-                        <li><a href="../home/index.html">Home</a></li>
-                        <li><u>Doações</u></li>
-                        <li><a href="../vendas/index.html">Vendas</a></li>
-                        <li><a href="../sobre/index.html">Sobre nós</a></li>
-                        <li><a href="../login/index.html">Login/Cadastro</a></li>
-                    </ul>
-                    <div class="logo">
-                            <img src="../logo2.png" id="imglogo">
-                            <p id="textologo">SearchPet</p>
-                        </div>
-                    </ul>
-                </div>
-                <div id="menuMobile"></div>
-                <ul>
-                    <li><a href="../home/index.html">Home</a></li>
-                    <li><u>Doações</u></li>
-                    <li><a href="../vendas/index.html">Vendas</a></li>
-                    <li><a href="../sobre/index.html">Sobre nós</a></li>
-                    <li><a href="../login/index.html">Login/Cadastro</a></li>
                 
+                <ul>
+                    <li><a href="../l_home/index.html">Home</a></li>
+                    <li><u>Doações</u></li>
+                    <li><a href="../l_venda/index.html">Vendas</a></li>
+                    <li><a href="../l_sobre/index.html">Sobre nós</a></li>
+                    <li id="ultimo_li"> 
+                        <label for="user" > <img src="/image/user_branco.png" id="user"></label>
+                        <select name="label" onchange="location = this.value;"> 
+                            <option id="optext">perfil</option>
+                            <option id="optext" value="/home/index.html">sair</option>
+                        </select>
+                           
+                        </label>
+                    </li>
                 </ul>
             </div>
-
-
-
+           
         </header>
 
 
@@ -63,11 +56,7 @@
             <div id="quadro">
 
                 <div class="cabecalho">
-                    <div id="opDoacao">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+
                     <p id="textodoacao"> Doações</p>
                     <div id="opcoes">
 
@@ -94,7 +83,6 @@
                         </select><br><br>
 
                         <label for="tipo" id="tipoanimal"><u><b>Animal desejado:</b></u></label>
-                        
                         <label for="cachorro" id="tipo"> <b>Cachorro</b></label>
                         <input type="radio" id="cachorro" name="Tipo" />
 
@@ -102,8 +90,7 @@
                         <input type="radio" id="gato" name="Tipo" />
 
                         <label for="outros" id="tipo"> <b>Outros</b></label>
-                        <input type="radio" id="outros" name="Tipo" /><br><br>
-
+                        <input type="radio" id="outros" name="Tipo" /> <br><br>
                         <label for="todos" id="tipo"> <b>Todos</b></label>
                         <input type="radio" id="todos" name="Tipo" /> <br><br>
                     </div>
@@ -392,5 +379,5 @@
 
 
     </body>
-<script src="../main.js"></script>
+
 </html>

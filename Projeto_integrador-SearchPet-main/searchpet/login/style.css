@@ -10,11 +10,14 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
+    height: 10vh;
     background-color: gainsboro;
     
 
 }
+
+
+
 .logo {
     display: flex;
     align-items: center;
@@ -35,21 +38,20 @@ header {
     align-items: center;
 
 }
-header>.botoes > ul {
+.botoes > ul {
     list-style: none;
 }
 
-header>.botoes > ul > li {
+.botoes > ul > li {
     font-size: 25px;
     margin: 0px 40px 0px 0px;
     padding: 3px;
-     font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-header>.botoes > ul > li> a:hover {
+.botes>ul > li> a:hover {
 
     color: rgb(178, 178, 178);
-    text-decoration: underline;
     
 }
 
@@ -57,13 +59,13 @@ header>.botoes > ul > li> a:hover {
 .main {
 
     width: 100%;
-    height: 90%;
+    height: 90vh;
     background-image: url(./home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
-    
+    justify-content: center;
     align-items: center;
 
 }
@@ -75,94 +77,131 @@ header>.botoes > ul > li> a:hover {
     background-color: rgba(0, 0, 0, 0.496);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: center; 
 }
 
-p {
+.card{
+    width: 320px;
+    height: 420px;
+    background-color: rgba(255, 255, 255, 0.274);
+}
+
+.form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#textlogin{
+    font-size: 30px;
+}
+
+
+#div_email{
+    width: 70%;
+    margin-top: 10px;
+    display: flex;
+}
+#img_login{
+
+    padding: 5px;
+    height: 37px;
+    background-color: rgba(255, 255, 255, 0.644);
+    justify-self: flex-end;
+}
+#login{
+    width: 100%;
+    height: 37px;
+    border: none;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.308);
+}
+#senha{
+    width: 100%;
+    height: 37px;
+    border: none;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.308);
+}
+#login::placeholder{
+    color: black;
+}
+#senha::placeholder{
+    color: black;
+}
+#div_senha{
+    width: 70%;
+    margin-top: 10px;
+    display: flex;
+}
+
+header>.botoes>#logo>p {
     margin: 0px 0px 16px 10px;
     font-size: 20px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
+header>.botoes>ul>li>a{
     text-decoration: none;
     color: black;
 }
 
 
-.t1 {
-    margin-top: 50px;
-    color: white;
+.botoes > ul > li> a:hover {
 
+    color: rgb(178, 178, 178);
+    text-decoration: underline;
+    
 }
 
-.t2 {
-
-    margin-top: 60px;
-    color: white;
-
-}
-
-#lorem {
-    font-size: 16px;
-    margin-top: 15px;
-    text-align: justify;
-    max-width: 1200px;
-    margin: 20px;
-}
-
-.rodape {
-    padding: 45px;
+#checkbox{
+    height: 10%;
+    width: 70%;
     display: flex;
+    align-items: center;
+
+}
+#lembrar{
+    height: 25%;
+    border: none;
+}
+#textlembrar{
+    font-size: 13px;
+    margin: 0 5px;
+   
+}
+#botao_entrar{
+    width: 70%;
+    height: 8%;
+    background-color: white;
+    border: none;
+}
+#linha{
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.199);
+}
+form span{
+    display: flex;
+    align-items: center;
+    width: 100%;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-
+}
+#textspan{
+    height: 1%;
+    padding: 0 10px;
+}
+#botao_cadastro{
+    width: 70%;
+    height: 8%;
+    background-color: white;
+    border: none;
+    margin-top: 15px;
 }
 
-footer {
 
-    height: 285px;
-    width: 100%;
-    background-color: gray;
-}
-
-#imgf {
-    height: 30px;
-    margin-right: 10px;
-}
-
-.contato>ul>li {
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-
-}
-
-.contato>ul {
-    width: 100%;
-
-}
-
-#titlecont {
-    font-size: 25px;
-    padding: 10px;
-}
-
-.contato {
-    width: 100%;
-}
-.siga>ul>li{
-    display: flex;
-    align-items: center;
-}
-.siga>ul>li:hover{
-    color: white;
-}
-.contato>ul>li:hover{
-    color: white;
-}
 #atrasBurger{
     display: none;
     position: fixed;
@@ -278,6 +317,7 @@ footer {
 #menuMobile{
     position: absolute;
     background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(0,0,0,0));
     opacity: 70%;
     width: 450px;
     height:400px;
@@ -293,6 +333,54 @@ footer {
 }
 #menuMobile.active{
     transform: translateX(0%);
+}
+
+/* footer */
+
+footer>ul > li> a:hover {
+    color: rgb(178, 178, 178);
+}
+footer {
+
+    height: 285px;
+    width: 100%;
+    background-color: gray;
+}
+
+#imgf {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.contato>ul>li {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+.contato>ul {
+    width: 100%;
+
+}
+
+#titlecont {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.contato {
+    width: 100%;
+}
+.siga>ul>li{
+    display: flex;
+    align-items: center;
+}
+.siga>ul>li:hover{
+    color: white;
+}
+.contato>ul>li:hover{
+    color: white;
 }
 @media(max-width: 1200px){
     .barra{
@@ -346,22 +434,8 @@ footer {
     }
 }
 @media(max-width: 700px){
-    h1{
-        font-size: 15px;
-    }
-    #lorem{
-        font-size: 10px;
-    }
-}
-
-@media(max-width: 300px){
-    h1{
-        font-size: 7px;
-    }
-    #lorem{
-        font-size: 5px;
-    }
-    .rodape{
-        flex-direction: column;
+    .card{
+        width: 260px;
+        height: 380px;
     }
 }
