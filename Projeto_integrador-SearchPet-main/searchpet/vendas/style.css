@@ -9,13 +9,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     background-color: gainsboro;
     
 
 }
-
 
 
 .logo {
@@ -53,13 +52,14 @@ header>.botoes>ul > li> a:hover {
 
     color: rgb(178, 178, 178);
     text-decoration: underline;
+    
 }
 
 
 
 .main {
 
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-image: url(./home.jpg);
     background-repeat: no-repeat;
@@ -95,18 +95,78 @@ a{
 }
 
 .cabecalho{
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     background-color: rgba(255, 255, 255, 0.502);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    
 }
+#opDoacao {
+    height: 50px;
+    width: 50px;
+    display: none;
+    opacity: 0;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-self: center;
+    align-items: flex-end;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+#opDoacao div{
+    border-radius: 50px;
+    height: 50px;
+    width: 10px;
+    background-color: rgb(0, 0, 0);
+    transition: all ease-out 0.5s;
+}
+#opDoacao div:nth-child(1){
+    height: 50%;
+}
+#opDoacao div:nth-child(2){
+    height: 80%;
+}
+#opDoacao div:nth-child(3){
+    height: 50%;
+}
+#opDoacao:hover div{
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+}
+
+#opDoacao.active > div:nth-child(2){
+    opacity: 0;
+}
+#opDoacao.active > div:nth-child(1){
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    /* transform: rotate(45deg) translateY(14px) translateX(10px); */
+    /* transform: rotate(-135deg) translateY(-14px) translateX(-10px); */
+    transform: rotate(-45deg) translateY(-13px) translateX(-10px);
+}
+#opDoacao.active > div:nth-child(3){
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    /* transform: rotate(135deg) translateY(2px) translateX(2px); */
+    /* transform: rotate(-45deg) translateY(-2px) translateX(-2px); */
+    transform: rotate(45deg) translateY(-13px) translateX(10px);
+}
+
 #opcoes{
-    width: 100vw;
+    /* position: absolute; */
+    width: 100%;
     height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all ease-in 1s;
+}
+#opcoes.active{
+    display: flex;
+    transform: translate(0);
+   
 }
 
 #regiao{
@@ -136,9 +196,10 @@ a{
     font-size: 30px;
 }
 .card{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display:flex;
+
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
@@ -160,17 +221,24 @@ a{
 #fotoanimal{
     width: 100%;
     height: 60%;
-    background-image: url("animal1.png");
-    background-position: center;
-    background-size: contain;
+
     
 }
+#fotoanimal2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+}
+
 #inf-animal{
     width: 100%;
     height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 5px;
     
    
 }
@@ -189,12 +257,12 @@ a{
 #botao{
     width: 45%;
     height: 20%;
-    background-color: gray;
+    background-color: rgb(160, 156, 156);
+    font-size: 10px;
 }
 #status{
     color:rgb(13, 192, 13);
 }
-
 #num-pagina{
     height: 20px;
     width: 20px;
@@ -219,28 +287,147 @@ a{
 
 }
 
+#atrasBurger{
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 85px;
+    height: 50px;
+    background-color: #DCDCDC;
+    border-bottom-left-radius: 20px;
+    padding-right: 0px;
+}
+#atrasBurger.active{
+    display: none;
+}
+#burger {
+    height: 50px;
+    width: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    align-items: flex-end;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+#burger div{
+    border-radius: 50px;
+    width: 50px;
+    height: 10px;
+    background-color: rgb(0, 0, 0);
+    transition: all ease-out 0.5s;
+}
+#burger div:nth-child(1){
+    width: 80%;
+}
+#burger div:nth-child(2){
+    width: 60%;
+}
+#burger div:nth-child(3){
+    width: 40%;
+}
+#burger:hover div{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+#burger.active > div:nth-child(3){
+    opacity: 0;
+}
+#burger.active > div:nth-child(1){
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    /* transform: rotate(45deg) translateY(14px) translateX(10px); */
+    /* transform: rotate(-135deg) translateY(-14px) translateX(-10px); */
+    transform: rotate(-45deg) translateY(10px) translateX(-14px);
+}
+#burger.active > div:nth-child(2){
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    /* transform: rotate(135deg) translateY(2px) translateX(2px); */
+    /* transform: rotate(-45deg) translateY(-2px) translateX(-2px); */
+    transform: rotate(45deg) translateY(2px) translateX(-2px);
+}
+#menuMobileBack{
+    /* display: flex; */
+    width: 220px;
+    height: 315px;
+    background-color: rgba(0, 0, 0, 0.61);
+    position: absolute;
+    top: 10.2%;
+    right: 0;
+    border-bottom-right-radius: 50px;
+    z-index: 41;
+    transform: translateX(125%);
+    transition: all ease-in 1s;
+    color: white;
+}
+#menuMobileBack.active{
+    transform: translateX(0%);
+}
+#menuMobileBack.active .logo{
+    display: flex;
+}
+#menuMobileBack .logo{
+    display: none;
+    left: 250px;
+    color: white;
+    position: absolute;
+    margin: auto;
+    top: 20px;
+    align-items: flex-start;
+}
+#menuMobileBack .logo p{
+    color: white;
+}
+#menuMobileBack ul{
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 200px;
+
+}
+#menuMobileBack ul li {
+    padding: 15px;
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+   
+    
+}
+#menuMobileBack ul li a {
+    color: white;
+}
+
 footer {
 
-    height: 30vh;
-    width: 100vw;
+    height: 35vh;
+    width: 100%;
     background-color: gray;
+    display: flex;
+    justify-content: center;
 }
 
 #imgf {
     height: 30px;
     margin-right: 10px;
+    margin-bottom: 4px;
 }
 
 .contato>ul>li {
     font-size: 15px;
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
 
 }
-
+.contato {
+    width: 400px;
+}
 .contato>ul {
-    width: 300px;
+    width: 100%;
 
 }
 
@@ -249,17 +436,124 @@ footer {
     padding: 10px;
 }
 
-.contato {
-    width: 400px;
-}
 .siga>ul>li{
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
 }
 .siga>ul>li:hover{
     color: white;
 }
 .contato>ul>li:hover{
     color: white;
+}
+@media(max-width: 1200px){
+    /* ARRUMAR AKI O TAMANHO DPS */
+    /* .card{
+        /* height: 500px; */
+        /* height: 2000px; */
+    
+    #opcoes u b{
+        /* display: none; */
+        font-size: 13px;
+    }
+    #opcoes b{
+        /* display: none; */
+        font-size: 10px;
+    }
+    .barra{
+        background-color: black;
+        width: 30px;
+        height: 5px;
+        margin: 5px;
+        border-radius: 5px;
+        margin-right: 15px;
+    }
+    
+    .botoes ul {
+        display: none;
+    }
+    #atrasBurger{
+        display: contents;
+    }
+    #burger{
+        margin-right: 15px;
+        display: flex;
+        z-index: 50;
+    }
+    header{
+        min-width: 280px;
+        width: 100%;
+        min-height: 50px;
+    }
+    .botoes ul li {
+        border-bottom: 1px solid black;
+    }
+
+    .logo {
+        margin-left: 10px;
+    }
+    .main{
+        min-width: 280px;
+        /* height: 500px; */
+        min-height: 280px;
+    }
+    .fundo {
+        /* flex-direction: column; */
+        width: 700px;  
+        height: 500px;      
+    }
+    
+    p {
+        font-size: 15px;
+    }
+    #img{
+        height: 200px;
+    }
+    #animal{
+        width: 20%;
+    }
+}
+@media(max-width: 880px){
+
+    #animal{
+        width: 30%;
+    }
+
+
+}
+@media(max-width: 700px){
+    #opcoes{
+        transform: translateX(100%);
+        height: 350px;
+        width: 150px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+        font-size: 15px;
+        position: absolute;
+        top: 19.5%;
+        right: 0;
+        color: white;
+        padding: 10px;
+        background-color: rgb(0, 0, 0,0.61);
+        
+        border-end-start-radius: 50px;
+        box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.466);
+    }
+    #tipoanimal{
+        align-self: flex-start;
+    }
+    #opDoacao{
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        z-index: 50;
+        opacity: 100;
+    }
+    #animal{
+        width: 35%;
+    }
+
 }

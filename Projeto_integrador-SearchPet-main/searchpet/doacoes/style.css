@@ -16,6 +16,7 @@ header {
 
 }
 
+
 .logo {
     display: flex;
     align-items: center;
@@ -88,6 +89,7 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 a{
     text-decoration: none;
     color: black;
@@ -131,7 +133,7 @@ a{
     height: 50%;
 }
 #opDoacao:hover div{
-    background-color: rgb(62, 143, 62);
+    background-color: rgb(0, 0, 0);
     height: 100%;
 }
 
@@ -139,14 +141,14 @@ a{
     opacity: 0;
 }
 #opDoacao.active > div:nth-child(1){
-    background-color: rgb(62, 143, 62);
+    background-color: rgb(255, 255, 255);
     height: 100%;
     /* transform: rotate(45deg) translateY(14px) translateX(10px); */
     /* transform: rotate(-135deg) translateY(-14px) translateX(-10px); */
     transform: rotate(-45deg) translateY(-13px) translateX(-10px);
 }
 #opDoacao.active > div:nth-child(3){
-    background-color: rgb(62, 143, 62);
+    background-color: rgb(255, 255, 255);
     height: 100%;
     /* transform: rotate(135deg) translateY(2px) translateX(2px); */
     /* transform: rotate(-45deg) translateY(-2px) translateX(-2px); */
@@ -165,6 +167,7 @@ a{
 #opcoes.active{
     display: flex;
     transform: translate(0);
+   
 }
 
 #regiao{
@@ -219,20 +222,26 @@ a{
 #fotoanimal{
     width: 100%;
     height: 60%;
-    background-image: url("animal1.png");
-    background-position: center;
-    background-size: contain;
+
     
 }
+#fotoanimal2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+}
+
 #inf-animal{
     width: 100%;
     height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-   
+    padding-top: 10px;
 }
+
 #botao-animal{
     width: 100%;
     height: 40%;
@@ -248,7 +257,8 @@ a{
 #botao{
     width: 45%;
     height: 20%;
-    background-color: gray;
+    background-color: rgb(160, 156, 156);
+    font-size: 10px;
 }
 #status{
     color:rgb(13, 192, 13);
@@ -320,7 +330,7 @@ a{
     width: 40%;
 }
 #burger:hover div{
-    background-color: rgb(135, 143, 62);
+    background-color: rgb(0, 0, 0);
     width: 100%;
 }
 
@@ -328,14 +338,14 @@ a{
     opacity: 0;
 }
 #burger.active > div:nth-child(1){
-    background-color: rgb(135, 143, 62);
+    background-color: rgb(255, 255, 255);
     width: 100%;
     /* transform: rotate(45deg) translateY(14px) translateX(10px); */
     /* transform: rotate(-135deg) translateY(-14px) translateX(-10px); */
     transform: rotate(-45deg) translateY(10px) translateX(-14px);
 }
 #burger.active > div:nth-child(2){
-    background-color: rgb(135, 143, 62);
+    background-color: rgb(255, 255, 255);
     width: 100%;
     /* transform: rotate(135deg) translateY(2px) translateX(2px); */
     /* transform: rotate(-45deg) translateY(-2px) translateX(-2px); */
@@ -345,13 +355,13 @@ a{
     /* display: flex; */
     width: 220px;
     height: 315px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.61);
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 10.2%;
+    right: 0;
     border-bottom-right-radius: 50px;
     z-index: 41;
-    transform: translateX(-125%);
+    transform: translateX(125%);
     transition: all ease-in 1s;
     color: white;
 }
@@ -379,46 +389,32 @@ a{
     align-items: flex-start;
     flex-direction: column;
     width: 200px;
+
 }
 #menuMobileBack ul li {
     padding: 15px;
-    border-bottom: 1px solid #cbd635;
+    border-bottom: 1px solid #ffffff;
     width: 100%;
+   
     
 }
 #menuMobileBack ul li a {
     color: white;
 }
-#menuMobile{
-    position: absolute;
-    background-color: rgb(0, 0, 0);
-    opacity: 70%;
-    width: 450px;
-    height:400px;
-    border-end-end-radius: 100px;
-    top: 0;
-    left: 0;
-    /* margin-left: -100vw; */
-    transform: translateX(-125%);
-    transition: all ease-in 1s;
-    z-index: 40;
-    color: white;
-    box-shadow: 0px 0px 10px 50px black;
-}
-#menuMobile.active{
-    transform: translateX(0%);
-}
 
 footer {
 
-    height: 285px;
+    height: 35vh;
     width: 100%;
     background-color: gray;
+    display: flex;
+    justify-content: center;
 }
 
 #imgf {
     height: 30px;
     margin-right: 10px;
+    margin-bottom: 4px;
 }
 
 .contato>ul>li {
@@ -427,7 +423,9 @@ footer {
     align-items: center;
 
 }
-
+.contato {
+    width: 400px;
+}
 .contato>ul {
     width: 100%;
 
@@ -438,9 +436,6 @@ footer {
     padding: 10px;
 }
 
-.contato {
-    width: 100%;
-}
 .siga>ul>li{
     display: flex;
     align-items: center;
@@ -453,10 +448,10 @@ footer {
 }
 @media(max-width: 1200px){
     /* ARRUMAR AKI O TAMANHO DPS */
-    .card{
+    /* .card{
         /* height: 500px; */
         /* height: 2000px; */
-    }
+    
     #opcoes u b{
         /* display: none; */
         font-size: 13px;
@@ -514,22 +509,44 @@ footer {
     #img{
         height: 200px;
     }
+    #animal{
+        width: 20%;
+    }
+    #inf-animal>p{
+        font-size: 10px;
+        padding-top:10px;
+    }
+}
+@media(max-width: 880px){
+
+    #animal{
+        width: 30%;
+    }
+
+
 }
 @media(max-width: 700px){
     #opcoes{
         transform: translateX(100%);
-        padding-top: 40px;
-        display: none;
-        justify-content: flex-start;
-        flex-direction: column;
-        position: absolute;
-        top: 132px;
-        right: 0;
-        background-color: rgb(240, 193, 38);
         height: 350px;
         width: 150px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+        font-size: 15px;
+        position: absolute;
+        top: 19.5%;
+        right: 0;
+        color: white;
+        padding: 10px;
+        background-color: rgb(0, 0, 0,0.61);
+        
         border-end-start-radius: 50px;
-        box-shadow: 0px 0px 20px 0px rgb(240, 193, 38);
+        box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.466);
+    }
+    #tipoanimal{
+        align-self: flex-start;
     }
     #opDoacao{
         margin-right: 15px;
@@ -539,5 +556,15 @@ footer {
         z-index: 50;
         opacity: 100;
     }
-    
+    #animal{
+        width: 35%;
+    }
+
+}
+
+@media(max-width: 380px){
+#inf-animal{
+    font-size: 5px;
+    padding-top:10px;
+}
 }

@@ -16,7 +16,7 @@
     <body>
 
         <header>
-            
+
 
 
             <div class="logo">
@@ -62,42 +62,66 @@
             <div id="quadro">
                 <div class="card">
 
-                    <form class="form">
-                       <p id="textlogin"> Login</p>
+                    <form id="form">
+                        <p id="textlogin"> Login</p>
 
                         <div id="div_email">
                             <label><img src="../image/user.png" id="img_login"></label>
-                            <input type="email" id="login" placeholder=" Insira o seu email" required/> 
+                            <input type="email" id="login" placeholder="Insira o seu email" required/>
                         </div>
-                        
-			            <div id="div_senha">
-                            <label><img src="../image/padlock.png" id="img_login"></label>
-                            <input type="password" id="senha" placeholder="  Insira sua senha" required/> 
+
+                        <div id="div_senha">
+                            <label><img src="../image/padlock.png"
+                                    id="img_login"></label>
+                            <input type="password" id="senha" placeholder="Insira sua senha" required/>
                         </div>
-                       
+
                         <div id="checkbox">
                             <input type="checkbox" id="lembrar">
                             <label for="lembrar" id="textlembrar">Lembrar-me</label>
                         </div>
-                        <input type="button" value="Entrar" id="botao_entrar" onclick="login.value == 'larissa.carrara@hotmail.com' && senha.value =='1234' ? window.location.href = '/logado/l_home/index.html' :alert('Login inválido')">
+                        <input type="button" value="Entrar" id="botao_entrar" onclick="login.value != '' && senha.value !='' ? logar() :alert('Login inválido')">
                         <span>
-                             <hr size="10" width="35%" id="linha"> 
+                            <hr size="10" width="35%" id="linha">
                             <p id="textspan">Ou</p>
                             <hr size="10" width="35%" id="linha">
                         </span>
-                        
                         <input type="button" value="Cadastrar" id="botao_cadastro">
                     </form>
-                    
-                    
-                
-                </div>
+                    <form id="cadTela">
+                        <p id="textlogin">Cadastro</p>
 
+                        <div id="sair">X</div>
+
+                        <div id="div_email">
+                            <label><img src="../image/user.png" id="img_login"></label>
+                            <input type="email" id="nomeUsu" placeholder="Insira seu nome" required/>
+                        </div>
+
+                        <div id="div_email">
+                            <label><img src="../image/user.png" id="img_login"></label>
+                            <input type="email" id="emailUsu" placeholder="Insira o seu email" required/>
+                        </div>
+
+                        <div id="div_senha">
+                            <label><img src="../image/padlock.png"
+                                    id="img_login"></label>
+                            <input type="password" id="senhaUsu" placeholder="Insira sua senha" required/>
+                        </div>
+
+                        <div id="div_senha">
+                            <label><img src="../image/padlock.png"
+                                    id="img_login"></label>
+                            <input type="password" id="senhaConf" placeholder="Confime sua senha" required/>
+                        </div>
+
+                        <input type="button" value="Cadastrar" id="cadastrar_usuario" onclick="nomeUsu.value != '' || emailUsu.value !='' || senhaUsu.value !='' || senhaConf.value !='' ? adicionar(emailUsu.value, senhaUsu.value, nomeUsu.value) :alert('Preencha todos os campos, por favor')">
+                        
+                    </form>
+                </div>
             </div>
 
-               
         </main>
-
 
         <footer>
             <div class="rodape">
@@ -137,10 +161,73 @@
 
         </footer>
 
-        </body>
+    </body>
+    <script src="../contas.js"></script>
+    <script src="../main.js"></script>
+    <script>
+        /*
+        const login = document.querySelector('#login')
+        const pass = document.querySelector('#senha')
+        const dados = [
+            {
+                'login': 'adm',
+                'pass': 1234
+            }
+        ]
+
+        function cadastrar() {
+            const dado = {
+                'login': login.value,
+                'pass': pass.value
+            }
+            dados.push(dado)
+            console.log(dado)
+            login.value = ''
+            pass.value = ''
+        }
+
+        function logar() {
+            alert('oi')
+            for (let i = 0; i < dados.length; i++) {
+                if (login.value == dados[i].login && pass.value == dados[i].pass) {
+                    alert('Logado com sucesso!')
+                    location.href = "../logado/l_home/index.html"
+                }
+            }
+        }
+        */
+        const cad = document.getElementById('botao_cadastro')
+        const sair = document.getElementById('sair')
+        cad.addEventListener('click', () => {
+            // alert('oi')
+            document.getElementById('form').classList.toggle('active')
+            document.getElementById('cadTela').classList.toggle('active')
+            /*
+            const modal = document.createElement('div')
+            const modalContent = document.createElement('div')
+            const form = document.createElement('form')
+            const input = document.createElement('input')
+            const label = document.createElement('label')
+            label.innerHTML = 'Nome:'
+            modal.classList.add('modal')
+            modalContent.classList.add('modalContent')
+            form.classList.add('formModal')
+            document.body.appendChild(modal)
+            modal.appendChild(modalContent)
+            modalContent.appendChild(form)
+            form.appendChild(label)
+            form.appendChild(input)
+            
+            flag = 1
+            */
+            
+        })
+        sair.addEventListener('click', () => {
+            // alert('oi')
+            document.getElementById('form').classList.toggle('active')
+            document.getElementById('cadTela').classList.toggle('active')
+        })
         
 
-
-<script src="../main.js"></script>
-
-    </html>
+    </script>
+</html>
